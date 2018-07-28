@@ -1,0 +1,18 @@
+Práctica socket udp con transimisión de un objeto mediante sockets.
+----
+Este proyecto consta de 2 paquetes:
+1. paquete m: contiene la lógica del servidor, aunque también actúa como parte de control
+	de la interfaz de usuario, es decir, interactua con la IU.
+2.paquete vc: contiene la implementación de la lógica contenida en el paquete m, el diseño
+	de las interfaces de cliente y servidor y también los lanzadores de cada uno de ellos.
+-----
+Información:
+1. Los "main" lanzadores de cliente y servidor se encuentran en InterfaceClient.java y en 
+	InterfaceServer.java respectivamente.
+2. Si en la interfaz de cliente se especifica un host que no existe el botón encargado de enviar
+	el mensaje no se bloquea (porque la operación se realiza en un nuevo hilo), se produce una
+	excepción que está controlada y se muestra un mensaje informativo al usuario.
+	Pero esta excepción tarda alrededor de 5 segundos en aparecer.
+	
+3. Primero se ha de iniciar el servidor y después el cliente, da igual si se inician desde CMD o
+	desde eclipse.
